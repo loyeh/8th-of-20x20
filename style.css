@@ -15,6 +15,9 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+main {
+  max-width: 50vw;
+}
 h1,
 h2 {
   margin: 30px;
@@ -44,6 +47,7 @@ button {
   border-radius: 5px;
   height: 35px;
   aspect-ratio: 1;
+  cursor: pointer;
 }
 
 button:first-of-type {
@@ -54,19 +58,58 @@ button:last-of-type {
   right: 0;
 }
 .searchRes {
-  text-align: left;
-  width: 550px;
+  display: none;
+  text-align: center;
+  /* max-width: 80vw; */
+  min-width: 80vw;
+}
+.container {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 img {
   aspect-ratio: 1;
   border: 4px solid white;
   margin: 10px;
 }
+.meal {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
 .searchRes img {
   width: 150px;
 }
-/* .mealInfo {
-} */
+.mealTitle {
+  visibility: hidden;
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000bb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.meal:hover .mealTitle {
+  transition: 0.5s ease-in-out;
+
+  visibility: visible;
+}
+.mealInfo {
+  display: none;
+}
 .mealInfo img {
   width: 300px;
 }
@@ -83,20 +126,23 @@ img {
 .category p {
   letter-spacing: 2px;
 }
+
 .ingredients,
 .ingredients .row {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
-.ingredients {
+/* .ingredients {
   flex-direction: column;
 }
 .ingredients .row {
   flex-direction: row;
-}
-.row div {
+} */
+.ingredients div {
   padding: 5px;
+  word-wrap: normal;
   background-color: white;
   border-radius: 5px;
   color: black;
