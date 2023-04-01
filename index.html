@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Meal Finder</title>
+
+    <!-- font aowesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <main>
+      <h1>Meal Finder</h1>
+      <!-- Meal Search division -->
+      <div class="search">
+        <input type="text" name="mealFinder" id="mealFinder" placeholder="Search for meals or keywords" />
+        <button onclick="findMeals()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button onclick="randomMeal()">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+      </div>
+      <!-- Meal Search division -->
+
+      <!-- Search Result division -->
+      <div class="searchRes" id="searchRes">
+        <h2>Search results for '<span>Steak</span>':</h2>
+        <div id="searchImg"></div>
+      </div>
+      <!-- Search Result division -->
+
+      <!-- Meal Information division -->
+      <div class="mealInfo">
+        <h1 id="mealName">Steickey Toffee Pudding Ultimate</h1>
+        <div class="category">
+          <p id="category"></p>
+          <p id="area"></p>
+        </div>
+        <div id="instructions"></div>
+        <h2>Ingredients</h2>
+        <div class="ingredients" id="ingredients"></div>
+      </div>
+      <!-- Meal Information division -->
+    </main>
+  </body>
+</html>
